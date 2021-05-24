@@ -21,7 +21,7 @@ import numpy as np
 import pandas as pd
 #read the csv file into data. "fp" is variable of csv file.
 fp = r'data/helsinki-vantaa.csv'
-data = pd.read_csv(fp)
+data = pd.read_csv(fp,parse_dates=['DATE'], index_col='DATE')
 
 # This test print should print first five rows
 print(data.head())
@@ -36,7 +36,7 @@ print(len(data))
 # - Store the selection in a new variable `selection`
 
 # YOUR CODE HERE 2
-
+selection = data.loc[(data.index >= '19880101') & (data.index < '20181231')]
 # Check that the data was read in correctly:
 selection.head()
 
