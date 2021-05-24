@@ -17,6 +17,11 @@
 # - Parse dates from the column `'DATE'` and set the dates as index in the dataframe 
 
 # YOUR CODE HERE 1 to read the data into data and parse dates
+import numpy as np
+import pandas as pd
+#read the csv file into data. "fp" is variable of csv file.
+fp = r'data/helsinki-vantaa.csv'
+data = pd.read_csv(fp)
 
 # This test print should print first five rows
 print(data.head())
