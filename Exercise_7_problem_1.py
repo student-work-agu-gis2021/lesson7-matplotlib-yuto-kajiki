@@ -13,12 +13,21 @@
 # 
 # ### Part 1
 # 
+
 # Create an new data frame called `data` and add 1000 random numbers (`float`) into a new column `x` and another 1000 random numbers (`float`) into a new column `y`.
 
 import numpy as np
 import pandas as pd
 
 # YOUR CODE HERE 1 to set data
+#1000 random numbers row x
+random_numbersx=np.random.rand(1000) 
+#1000 random numbers row y
+random_numbersy=np.random.rand(1000) 
+#input dataframe"x"
+data=pd.DataFrame({'x':random_numbersx}) 
+#append dataframe"y"
+data["y"]=random_numbersy
 
 # Check your random values
 print(data.head())
@@ -28,7 +37,8 @@ assert len(data) == 1000, "There should be 1000 rows of data."
 
 
 # ### Part 2
-# 
+#create 1000 random colors in variable "colors"
+colors=np.random.rand(1000) 
 
 # YOUR CODE HERE 2 to set colors
 
