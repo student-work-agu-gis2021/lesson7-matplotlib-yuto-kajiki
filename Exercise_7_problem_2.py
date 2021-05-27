@@ -61,7 +61,7 @@ print("Number of rows:", len(selection))
 import matplotlib.pyplot as plt
 thirty_years_temps = selection['TEMP_C']
 #create plot
-ax=thirty_years_temps.plot(linestyle="solid",color="black",marker="o",markersize=3,figsize=(14,6))
+ax=thirty_years_temps.plot(linestyle="solid",color="black",marker="o",markersize=3,figsize=(28,12))
 #create title
 ax.set_title('Helsinki-Vantaa Airport')
 #create xlabel
