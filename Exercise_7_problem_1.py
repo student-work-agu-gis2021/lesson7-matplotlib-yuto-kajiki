@@ -64,9 +64,9 @@ assert len(colors) == 1000, "There should be 1000 random numbers for colors"
 # YOUR CODE HERE 3
 import matplotlib.pyplot as plt
 # "cm is a variable of colormap"
-cm = plt.cm.get_cmap('RdYlBu')
+cm = plt.cm.get_cmap('Spectral')
 #input scatter plot with size, color, edgecolor, and cmap
-plt.scatter(random_numbersx,random_numbersy,s=50, c="pink",edgecolors="red",cmap=cm)
+plt.scatter(random_numbersx,random_numbersy,s=50, c=colors,edgecolors="black",cmap=cm)
 # Add labels and title
 # YOUR CODE HERE 4
 #create title

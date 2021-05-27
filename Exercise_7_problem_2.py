@@ -19,8 +19,9 @@
 # YOUR CODE HERE 1 to read the data into data and parse dates
 import numpy as np
 import pandas as pd
-#read the csv file into data. "fp" is variable of csv file.
+#"fp" is variable of csv file.
 fp = r'data/helsinki-vantaa.csv'
+#read the csv file into data. 
 data = pd.read_csv(fp,parse_dates=['DATE'], index_col='DATE')
 
 # This test print should print first five rows
@@ -36,7 +37,8 @@ print(len(data))
 # - Store the selection in a new variable `selection`
 
 # YOUR CODE HERE 2
-selection = data.loc[(data.index >= '19880101') & (data.index < '20181231')]
+# "selection" is the extracted data in data.
+selection = data.loc[(data.index >= '19880101') & (data.index <= '20181231')]
 # Check that the data was read in correctly:
 selection.head()
 
@@ -56,12 +58,25 @@ print("Number of rows:", len(selection))
 # 
 
 # YOUR CODE HERE 3
+import matplotlib.pyplot as plt
+thirty_years_temps = selection['TEMP_C']
+#create plot
+ax=thirty_years_temps.plot(linestyle="solid",color="black",marker="o",markersize=3,figsize=(14,6))
+#create title
+ax.set_title('Helsinki-Vantaa Airport')
+#create xlabel
+ax.set_xlabel('Time')
+#create ylabel
+ax.set_ylabel('Temperature(Celsius)')
+ax.grid()
 
 # Set output file name
-outputfp = ""
+outputfp = "temp_line_plot.png"
 
 # Save plot as image
 # YOUR CODE HERE 4
+#Save the plot as png file
+plt.savefig(outputfp)
 
 import os
 
